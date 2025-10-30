@@ -1,0 +1,104 @@
+/* Styles for HomePage component */
+:root{
+  --bg:#0f1724; /* deep navy */
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#7c5cff;
+  --glass: rgba(255,255,255,0.04);
+}
+
+.homepage-container{
+  max-width: 1000px;
+  margin: 36px auto;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(124,92,255,0.08), rgba(0,0,0,0));
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.homepage-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 20px;
+}
+
+.homepage-title{
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin:0;
+}
+
+.homepage-form{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+
+@media (max-width: 850px){
+  .homepage-form{ grid-template-columns: 1fr; }
+}
+
+.input-card{
+  background: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.label{ color: var(--muted); font-size: 0.95rem; margin-bottom:8px; }
+
+.raw-textarea{
+  width:100%;
+  min-height: 220px;
+  resize: vertical;
+  padding:12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.0));
+  color: #e8eef8;
+  font-family: inherit;
+}
+
+.platform-list{ display:flex; flex-direction:column; gap:10px; }
+.platform-item{ display:flex; align-items:center; gap:8px; color:var(--muted); }
+.platform-item input{ width:16px; height:16px; }
+
+.cta-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 14px;
+  background: linear-gradient(90deg, var(--accent), #6fb8ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight:600;
+}
+
+.results-column{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.post-card{
+  background: var(--glass);
+  padding:14px;
+  border-radius:10px;
+  border: 1px solid rgba(124,92,255,0.12);
+}
+
+.post-card .platform-name{ color: var(--accent); font-weight:700; }
+.post-card .post-content{ color: #e6eef8; margin-top:8px; white-space:pre-wrap; }
+
+.raw-response{ background:#071028; padding:12px; border-radius:8px; color:#dbe9ff; }
+
+/* small niceties */
+h4, h3{ color: #cfe1ff }
+
+textarea:focus, input:focus{ outline: 2px solid rgba(124,92,255,0.18); }
+
+/* subtle page background */
+body{ background: linear-gradient(180deg,#071026,#071028 60%); }
